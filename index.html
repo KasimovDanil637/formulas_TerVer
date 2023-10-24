@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TerVer</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="index.js"></script>
+</head>
+<body>
+<div class="block-one">
+    <div class="block-one-img">
+        <img src="assets/table.jpg" alt="" class="img">
+    </div>
+</div>
+<div class="logic">
+    <div class="rep">
+        <div class="up-rep"></div>
+        <div class="no-rep">No repetitions</div>
+        <div class="with-rep">With repetitions</div>
+    </div>
+    <div class="pl">
+        <div class="up-pl">Placements</div>
+        <div class="no-pl">
+            <div class="text">A</div>
+            <div class="kn">
+                <div class="k">
+                    <input type="text" placeholder="k" class="input-k" id="no-pl-k">
+                </div>
+                <div class="n">
+                    <input type="text" placeholder="n" class="input-n" id="no-pl-n">
+                </div>
+            </div>
+            <div class="equals">
+                <div class="equals-icon">
+                    <button class="equals-btn" id="no-pl-eq">
+                        <img src="assets/equals.png" alt="" class="img-equals">
+                    </button>
+                </div>
+            </div>
+            <div class="answer">
+                <input type="text" class="answer-block" placeholder="Ответ" id="no-pl-a">
+            </div>
+        </div>
+        <div class="with-pl">
+            <div class="text-line">
+                <div class="line">_</div>
+                <div class="text-l">A</div>
+            </div>
+            <div class="kn">
+                <div class="k">
+                    <input type="text" placeholder="k" class="input-k" id="wi-pl-k">
+                </div>
+                <div class="n">
+                    <input type="text" placeholder="n" class="input-n" id="wi-pl-n">
+                </div>
+            </div>
+            <div class="equals">
+                <div class="equals-icon">
+                    <button class="equals-btn" id="wi-pl-eq">
+                        <img src="assets/equals.png" alt="" class="img-equals">
+                    </button>
+                </div>
+            </div>
+            <div class="answer">
+                <input type="text" class="answer-block" placeholder="Ответ" id="wi-pl-a">
+            </div>
+        </div>
+    </div>
+    <div class="per">
+        <div class="up-pl">Permutations</div>
+        <div class="no-pl">
+            <div class="text">P</div>
+            <div class="kn">
+                <div class="k">
+                    <div class="block-k"></div>
+                </div>
+                <div class="n">
+                    <input type="text" placeholder="n" class="input-n" id="no-per-n">
+                </div>
+            </div>
+            <div class="equals">
+                <div class="equals-icon">
+                    <button class="equals-btn" id="no-per-eq">
+                        <img src="assets/equals.png" alt="" class="img-equals">
+                    </button>
+                </div>
+            </div>
+            <div class="answer">
+                <input type="text" class="answer-block"  placeholder="Ответ" id="no-per-a">
+            </div>
+        </div>
+        <div class="with-pl">
+            <div class="text-line">
+                <div class="text-p">P</div>
+            </div>
+            <div class="kn">
+                <div class="k">
+                    <input type="text" placeholder="..." class="input-k" id="wi-per-k">
+                </div>
+                <div class="n">
+                    <input type="text" placeholder="n" class="input-n" id="wi-per-n">
+                </div>
+            </div>
+            <div class="equals">
+                <div class="equals-icon">
+                    <button class="equals-btn" id="wi-per-eq">
+                        <img src="assets/equals.png" alt="" class="img-equals">
+                    </button>
+                </div>
+            </div>
+            <div class="answer">
+                <input type="text" class="answer-block" placeholder="Ответ" id="wi-per-a" >
+            </div>
+        </div>
+    </div>
+    <div class="com">
+        <div class="up-pl">Combinations</div>
+        <div class="no-pl-c">
+            <div class="text">C</div>
+            <div class="kn">
+                <div class="k">
+                    <input type="text" placeholder="k" class="input-k" id="no-com-k">
+                </div>
+                <div class="n">
+                    <input type="text" placeholder="n" class="input-n" id="no-com-n">
+                </div>
+            </div>
+            <div class="equals">
+                <div class="equals-icon">
+                    <button class="equals-btn" id="no-com-eq">
+                        <img src="assets/equals.png" alt="" class="img-equals">
+                    </button>
+                </div>
+            </div>
+            <div class="answer">
+                <input type="text" class="answer-block" placeholder="Ответ" id="no-com-a">
+            </div>
+        </div>
+        <div class="with-pl-c">
+            <div class="text-line">
+                <div class="line">_</div>
+                <div class="text-l">C</div>
+            </div>
+            <div class="kn">
+                <div class="k">
+                    <input type="text" placeholder="k" class="input-k" id="wi-com-k">
+                </div>
+                <div class="n">
+                    <input type="text" placeholder="n" class="input-n" id="wi-com-n">
+                </div>
+            </div>
+            <div class="equals">
+                <div class="equals-icon">
+                    <button class="equals-btn" id="wi-com-eq">
+                        <img src="assets/equals.png" alt="" class="img-equals">
+                    </button>
+                </div>
+            </div>
+            <div class="answer">
+                <input type="text" class="answer-block" placeholder="Ответ" id="wi-com-a">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="urna">
+    <div class="urna-one">
+        <img src="assets/urna-one.png" alt="" class="one-img">
+        <div class="one-block">
+            <div class="formula">
+                <div class="formula-one">
+                    <div class="text">C</div>
+                        <div class="kn">
+                            <div class="k">
+                                <input type="text" placeholder="k" class="input-k" id="up-k">
+                            </div>
+                            <div class="n">
+                                <input type="text" placeholder="m" class="input-n" id="up-m">
+                            </div>
+                        </div>
+                </div>
+                <div class="delenie"></div>
+                <div class="formula-one">
+                    <div class="text">C</div>
+                    <div class="kn">
+                        <div class="k">
+                            <input type="text" placeholder="k" class="input-k" id="down-k">
+                        </div>
+                        <div class="n">
+                            <input type="text" placeholder="n" class="input-n" id="down-n">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="equals-urna">
+                    <div class="equals-icon-urna">
+                        <button class="equals-btn" id="left-eq">
+                            <img src="assets/equals.png" alt="" class="img-equals">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="answer">
+                <input type="text" class="answer-block-urna" placeholder="Ответ" id="left-answer">
+            </div>
+        </div>
+    </div>
+    <div class="urna-two">
+        <img src="assets/urna-two.png" alt="" class="two-img">
+        <div class="one-block">
+            <div class="formula">
+                <div class="dve-formula">
+                    <div class="formula-one">
+                        <div class="text">C</div>
+                        <div class="kn">
+                            <div class="k">
+                                <input type="text" placeholder="r" class="input-k" id="up-left-r">
+                            </div>
+                            <div class="n">
+                                <input type="text" placeholder="m" class="input-n" id="up-left-m">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formula-one">
+                        <div class="text">C</div>
+                        <div class="kn">
+                            <div class="k">
+                                <input type="text" placeholder="k" class="input-k" id="up-left-k">
+                            </div>
+                            <div class="n">
+                                <input type="text" placeholder="n" class="input-n" id="up-left-n">
+                            </div>
+                        </div>
+                        <div class="kn">
+                            <div class="k">
+                                <input type="text" placeholder="r" class="input-k" id="up-right-r">
+                            </div>
+                            <div class="n">
+                                <input type="text" placeholder="m" class="input-n" id="up-right-m">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="delenie-2"></div>
+                <div class="formula-one formula-down">
+                    <div class="text">C</div>
+                    <div class="kn">
+                        <div class="k">
+                            <input type="text" placeholder="k" class="input-k" id="down-right-k">
+                        </div>
+                        <div class="n">
+                            <input type="text" placeholder="n" class="input-n" id="down-right-n">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="equals-urna">
+                    <div class="equals-icon-urna">
+                        <button class="equals-btn" id="right-eq">
+                            <img src="assets/equals.png" alt="" class="img-equals">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="answer">
+                <input type="text" class="answer-block-urna" placeholder="Ответ" id="right-a">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
