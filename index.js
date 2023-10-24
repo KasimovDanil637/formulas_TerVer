@@ -52,18 +52,16 @@ double()
 right()
 function noPl(){
     noPlEq.addEventListener('click', () => {
-        noPlA.style.color = 'black'
         let k = Number(noPlK.value)
         let n = Number(noPlN.value)
         let nF = 1;
         let f = 1;
-        if (k <= n) {
+        if (k <= n && k >= 0 && n >= 0) {
             nF = fact(n)
             f = fact(n-k)
             noPlA.value = nF / f
         } else {
-            noPlA.value = "ERROR"
-            noPlA.style.color = 'red'
+            alert("Error: k <= n, k >= 0, n >= 0")
         }
     })
 }
@@ -72,8 +70,12 @@ function wiPl(){
         let k = Number(wiPlK.value)
         let n = Number(wiPlN.value)
         let f = 1
-        for (let i = 1; i <= k; i++) {
-            f *= n
+        if (k >= 0 && n >= 0) {
+            for (let i = 1; i <= k; i++) {
+                f *= n
+            }
+        } else {
+            alert("Error: k >= 0, n >= 0")
         }
         wiPlA.value = f
     })
@@ -81,19 +83,27 @@ function wiPl(){
 function noPer(){
     noPerEq.addEventListener('click', () => {
         let n = Number(noPerN.value)
-        noPerA.value = fact(n)
+        if(n >= 0) {
+            noPerA.value = fact(n)
+        } else {
+            alert("Error: n >= 0")
+        }
     })
 }
 function wiPer(){
     wiPerEq.addEventListener('click', () =>{
-        wiPerA.style.color = 'black'
         let array = wiPerK.value.split(',')
         let n = Number(wiPerN.value)
         let sum = 0;
         for (let i = 0; i < array.length; i++){
-            sum += Number(array[i])
+            if (array[i] >= 0) {
+                sum += Number(array[i])
+            } else {
+                alert("Error: ... >= 0")
+                return
+            }
         }
-        if (sum === n){
+        if (sum === n && n >= 0){
             let nF = fact(n)
             let p = 1
             for (let i = 0; i < array.length; i++){
@@ -101,24 +111,21 @@ function wiPer(){
             }
             wiPerA.value = nF / p
         } else {
-            wiPerA.value = "ERROR"
-            wiPerA.style.color = 'red'
+            alert("Error: n >= 0")
         }
     })
 }
 function noCom() {
     noComEq.addEventListener('click', () =>{
-        noComA.style.color = 'black'
         let n = Number(noComN.value)
         let k = Number(noComK.value)
-        if (k < n) {
+        if (k <= n && k >= 0 && n >= 0) {
             let nF = fact(n)
             let kF = fact(k)
             let nkF = fact(n - k)
             noComA.value = nF / (kF * nkF)
         } else {
-            noComA.value = "ERROR"
-            noComA.style.color = 'red'
+            alert("Error: k <= n, k >= 0, n >= 0 ")
         }
     })
 }
@@ -132,10 +139,14 @@ function wiCom(){
     wiComEq.addEventListener('click', () => {
         let n = Number(wiComN.value)
         let k = Number(wiComK.value)
-        let uF = fact(k + n - 1)
-        let dfo = fact(n-1)
-        let kf = fact(k)
-        wiComA.value = uF / ( dfo * kf)
+        if (n >= 0 && k >= 0) {
+            let uF = fact(k + n - 1)
+            let dfo = fact(n - 1)
+            let kf = fact(k)
+            wiComA.value = uF / (dfo * kf)
+        } else {
+            alert("Error: n >= 0, k >= 0")
+        }
     })
 }
 function fact(num) {
@@ -179,30 +190,26 @@ function double(){
 }
 function left(){
     leftEq.addEventListener('click', () => {
-        leftAnswer.style.color = 'black'
         let k = Number(leftUpK.value)
         let n = Number(leftDownN.value)
         let m = Number(leftUpM.value)
-        if (k < m && k < n){
+        if (k < m && k < n && k >= 0 && n >= 0 && m >= 0){
             leftAnswer.value = c(k,m) / c(k,n)
         } else {
-            leftAnswer.value = "ERROR"
-            leftAnswer.style.color = 'red'
+            alert("Error: k < m, k < n, k >= 0, n >= 0, m >= 0")
         }
     })
 }
 function right(){
     rightEq.addEventListener('click',()=>{
-        rightAnswer.style.color = 'black'
         let k = Number(downRightK.value)
         let n = Number(downRightN.value)
         let m = Number(rightUpRightM.value)
         let r = Number(rightUpRightR.value)
-        if (k < n && r < m && k < m){
+        if (k < n && r < m && k < m && k >= 0 && n >= 0 && m >= 0 && r >= 0){
             rightAnswer.value = (c(r,m) * c((k-r),(n-m))) / c(k,n)
         } else {
-            rightAnswer.value = "ERROR"
-            rightAnswer.style.color = 'red'
+            alert("Error: k < n, r < m, k < m, k >= 0,  n >= 0, m >= 0, r >= 0")
         }
     })
 }
