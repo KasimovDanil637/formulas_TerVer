@@ -193,10 +193,10 @@ function left(){
         let k = Number(leftUpK.value)
         let n = Number(leftDownN.value)
         let m = Number(leftUpM.value)
-        if (k < m && k < n && k >= 0 && n >= 0 && m >= 0){
+        if (k < m && k < n && k >= 0 && n >= 0 && m >= 0 && n >= m){
             leftAnswer.value = c(k,m) / c(k,n)
         } else {
-            alert("Error: k < m, k < n, k >= 0, n >= 0, m >= 0")
+            alert("Error: k < m, k < n, k >= 0, n >= 0, m >= 0, n >= m")
         }
     })
 }
@@ -206,10 +206,10 @@ function right(){
         let n = Number(downRightN.value)
         let m = Number(rightUpRightM.value)
         let r = Number(rightUpRightR.value)
-        if (k < n && r < m && k < m && k >= 0 && n >= 0 && m >= 0 && r >= 0){
+        if (k < n && r < m && k < m && k >= 0 && n >= 0 && m >= 0 && r >= 0 && n >= m && k >= r){
             rightAnswer.value = (c(r,m) * c((k-r),(n-m))) / c(k,n)
         } else {
-            alert("Error: k < n, r < m, k < m, k >= 0,  n >= 0, m >= 0, r >= 0")
+            alert("Error: k < n, r < m, k < m, k >= 0,  n >= 0, m >= 0, r >= 0, n >= m, k >= r")
         }
     })
 }
